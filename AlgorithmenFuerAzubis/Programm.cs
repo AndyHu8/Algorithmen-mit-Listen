@@ -56,7 +56,7 @@ namespace AlgorithmenFuerAzubis
             action = p.MalZwei;
 
             Comparison<object> comparison;
-            comparison = p.ZweiTypenVergleichen;
+            //comparison = p.ZweiTypenVergleichen;
 
             List<int> Liste2 = new List<int>();
             Liste2.Add(4);
