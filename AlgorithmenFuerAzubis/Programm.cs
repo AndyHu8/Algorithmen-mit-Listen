@@ -13,8 +13,17 @@ namespace AlgorithmenFuerAzubis
             Console.WriteLine(Zahl * 2);
         }
 
-        public void ZweiTypenVergleichen(object Objekt1, object Objekt2)
+        public int ZweiZahlenVergleichen(int Zahl1, int Zahl2)
         {
+            if (Zahl1 > Zahl2)
+            {
+                return 1;
+            }
+            else if (Zahl1 == Zahl2)
+            {
+                return 0;
+            }
+            else return -1;
 
         }
 
@@ -34,15 +43,16 @@ namespace AlgorithmenFuerAzubis
         {
             List<int> Liste = new List<int>();
 
-            Liste.Add(0);
-            Liste.Add(1);
-            Liste.Add(2);
+            Liste.Add(5);
+            Liste.Add(4);
             Liste.Add(3);
+            Liste.Add(2);
+            Liste.Add(1);
 
-            List<object> ListenObject = new List<object>();
+            /*List<object> ListenObject = new List<object>();
             ListenObject.Add("Andy");
             ListenObject.Add(2);
-            ListenObject.Add(0.3);
+            ListenObject.Add(0.3);*/
 
             //Liste.Clear();
             //Liste.Display();
@@ -55,8 +65,8 @@ namespace AlgorithmenFuerAzubis
             Action<int> action;
             action = p.MalZwei;
 
-            Comparison<object> comparison;
-            comparison = p.ZweiTypenVergleichen;
+            Comparison<int> comparison;
+            comparison = p.ZweiZahlenVergleichen;
 
             List<int> Liste2 = new List<int>();
             Liste2.Add(4);
@@ -103,15 +113,9 @@ namespace AlgorithmenFuerAzubis
             //Liste.Reverse();
             //Liste.Display();
 
-
-
-
-
-
-
-
-
-
+            //Liste.Sort(comparison);
+            //Liste.Display();
         }
     }
+
 }
